@@ -19,6 +19,9 @@ import { TarefaModule } from './tarefa/modules/tarefa.module';
       entities: [Tarefa, Categoria],
       synchronize: true
     }),*/
+
+
+
     TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
@@ -30,9 +33,14 @@ import { TarefaModule } from './tarefa/modules/tarefa.module';
       synchronize: true,
       autoLoadEntities: true
     }),
+
+
     TarefaModule,
     CategoriaModule
+
   ],
+
+  
   controllers: [AppController],
   providers: [],
 })
